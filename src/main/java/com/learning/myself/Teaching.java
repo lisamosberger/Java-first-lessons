@@ -6,6 +6,7 @@ public class Teaching {
     double decimal_numbers = 4.99;
     boolean true_false = true;
     char single_character = 'A';
+    var dator_väljer = "Allt möjligt";
     String text = "Hello World!";
             IO.println(text);
             IO.println(whole_numbers);
