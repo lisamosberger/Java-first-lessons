@@ -14,5 +14,16 @@ public class Main {
             IO.println(decimal_numbers);
             IO.println(true_false);
             IO.println(single_character);
+
+            double length = 1.85;
+            System.out.printf("%.20f", length);
+
+            test_1();
+        }
+
+        public static void test_1(){
+            int number = 1;
+                IO.println(number);
+
         }
 }
