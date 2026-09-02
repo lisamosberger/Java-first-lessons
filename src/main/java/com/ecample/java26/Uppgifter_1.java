@@ -48,13 +48,13 @@ public class Uppgifter_1 {
         int Mv = (tal_1 + tal_2 + tal_3)/3;
         IO.println("Medevärde är " + Mv);
 
-        if (tal_1 > tal_2){
+        if (tal_1 > tal_2 && tal_1 > tal_3){
             IO.println("Största tal: " + tal_1);
         }
-        else if (tal_2 > tal_3){
+        else if (tal_2 > tal_3 && tal_2 > tal_1){
             IO.println("Största tal: " + tal_2);
         }
-        else if (tal_3 > tal_1){
+        else if (tal_3 > tal_1 && tal_3 > tal_2){
             IO.println("Största tal: " + tal_3);
         }
 
