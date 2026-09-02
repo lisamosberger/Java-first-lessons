@@ -45,7 +45,7 @@ public class Uppgifter_1 {
         int tal_3 = Integer.parseInt(IO.readln("Vad är din tredje tal? "));
 
 
-        int Mv = (tal_1 + tal_2 + tal_3)/2;
+        int Mv = (tal_1 + tal_2 + tal_3)/3;
         IO.println("Medevärde är " + Mv);
 
         if (tal_1 > tal_2){
