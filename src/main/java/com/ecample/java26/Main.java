@@ -41,4 +41,8 @@ public class Main {
         static boolean lessThanTen(int v){
             return  v < 10;
         }
+
+        public static void ShutdownMessage(){
+            IO.println("Alla värden måste vara större eller lika med 0.");
+        }
 }
