@@ -1,7 +1,10 @@
 package com.ecample.java26;
 
+import java.util.Locale;
+
 public class Uppgifter_1 {
     static void main (){
+        Locale.setDefault(Locale.ENGLISH);
         uppgift_1();
         uppgift_2();
         uppgift_3();

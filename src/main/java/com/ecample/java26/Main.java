@@ -23,12 +23,22 @@ public class Main {
             double length = 1.85;
             System.out.printf(Locale.ENGLISH, "%.20f", length);
 
-            test_1();
+            boolean a = false;
+            boolean b = true;
+            int value = 10;
+            if (greatherThanZero(value) || lessThanTen(value))
+                IO.println("Sant");
         }
 
-        public static void test_1(){
-            int number = 1;
-                IO.println(number);
 
+        static boolean greatherThanZero(int v){
+            if (v > 0 )
+                return true;
+            else
+                return false;
+        }
+
+        static boolean lessThanTen(int v){
+            return  v < 10;
         }
 }
