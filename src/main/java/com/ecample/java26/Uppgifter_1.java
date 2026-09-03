@@ -48,8 +48,10 @@ public class Uppgifter_1 {
         int tal_3 = Integer.parseInt(IO.readln("Vad är din tredje tal? "));
 
 
-        int Mv = (tal_1 + tal_2 + tal_3)/3;
+        double Mv = (tal_1 + tal_2 + tal_3) /3;
         IO.println("Medevärde är " + Mv);
+
+        Math.max(tal_1, tal_2);
 
         if (tal_1 > tal_2 && tal_1 > tal_3){
             IO.println("Största tal: " + tal_1);
@@ -60,6 +62,27 @@ public class Uppgifter_1 {
         else if (tal_3 > tal_1 && tal_3 > tal_2){
             IO.println("Största tal: " + tal_3);
         }
+
+        //Metod 2 med arrays
+        double [] numbers = {tal_1, tal_2, tal_3};
+
+        double sum = 0;
+        for (int i = 0; i < numbers.length; i++){
+            sum += numbers[i];
+        }
+
+        double medelvärde = sum / numbers.length;
+        IO.println("Medelvärde: " + medelvärde);
+
+        double storst = numbers [0];
+
+        for (int i = 1; i < numbers.length; i++){
+            if (numbers[i] > storst){
+                storst = numbers[i];
+            }
+        }
+        IO.println("Störst: " + storst);
+
 
 
     }
@@ -91,6 +114,15 @@ public class Uppgifter_1 {
         int temp = tal_1;
         tal_1 = tal_2;
         tal_2 = temp;
+
+        IO.println("Efter byte är den första talen " + tal_1 + " och den andra är " + tal_2);
+
+        // Exempel 2, men använder det första möjlighet
+
+        tal_1 = tal_1 ^tal_2;
+        tal_2 = tal_1 ^tal_2;
+        tal_1 = tal_1 ^tal_2;
+
 
         IO.println("Efter byte är den första talen " + tal_1 + " och den andra är " + tal_2);
     }

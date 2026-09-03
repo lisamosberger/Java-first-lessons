@@ -54,7 +54,7 @@ public class InsuranceCalculator {
             licenseAgeAdjustment = basePrice * 0.20;
         }
         else if (licenseAge > 10) {
-            licenseAgeAdjustment = basePrice * -0.10;
+            licenseAgeAdjustment = basePrice * -0.10 ;
         }
 
         double finalPrice = basePrice + mileagueAdjustment + accidentsAdjustment + licenseAgeAdjustment;
