@@ -1,6 +1,6 @@
 package com.selfstudies;
 
-public class Datatype {
+public class Datatype_and_Operator {
     static void main() {
         //DATA TYPES
 
