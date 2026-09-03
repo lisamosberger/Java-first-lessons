@@ -1,4 +1,4 @@
-package com.ecample.java26;
+package com.example.java26;
 
 public class Input {
     static void main(){

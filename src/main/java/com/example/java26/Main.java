@@ -1,4 +1,4 @@
-package com.ecample.java26;
+package com.example.java26;
 
 import java.util.Locale;
 

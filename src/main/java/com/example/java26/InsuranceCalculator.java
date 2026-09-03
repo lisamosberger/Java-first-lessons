@@ -1,6 +1,4 @@
-package com.ecample.java26;
-
-import java.lang.reflect.Method;
+package com.example.java26;
 
 public class InsuranceCalculator {
     static void main() {
