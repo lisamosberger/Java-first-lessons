@@ -38,5 +38,7 @@ public class Datatype {
         // != not equal to
         // > greater than
         // < less than
+        // >= greater than or equal to
+
     }
 }
