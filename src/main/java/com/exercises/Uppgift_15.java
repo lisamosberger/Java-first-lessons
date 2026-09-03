@@ -11,13 +11,11 @@ public class Uppgift_15 {
 
     }
 
-    static boolean makesTen (int number_1, int number_2 ){
+    static String makesTen (int number_1, int number_2 ){
 
         if (number_1 == 10 && number_2 == 10 || number_1 + number_2 == 10){
-            return true;
+            return "True";
         }
-        else {
-            return false;
-        }
+        return "false";
     }
 }
