@@ -1,4 +1,6 @@
-package com.example.java26;
+package com.programmer;
+
+import com.example.java26.Main;
 
 public class InsuranceCalculator {
     static void main() {
@@ -70,8 +72,4 @@ public class InsuranceCalculator {
 
         IO.println("Ditt pris: " + finalPrice);
     }
-
-
-
 }
-

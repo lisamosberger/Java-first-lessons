@@ -1,6 +1,6 @@
 package com.example.java26;
 
-public class Input {
+public class InputOutput {
     static void main(){
 
         IO.println("Vad heter du?");
