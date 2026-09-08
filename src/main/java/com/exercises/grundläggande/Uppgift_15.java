@@ -1,4 +1,4 @@
-package com.exercises;
+package com.exercises.grundläggande;
 
 public class Uppgift_15 {
     static void main (){

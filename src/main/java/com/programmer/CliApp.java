@@ -4,7 +4,6 @@ public class CliApp {
     static void main (){
         boolean running = true;
         do {
-            getMenuText();
             IO.println(getMenuText());
             String choice = IO.readln("Pick a number: ");
             switch (choice){
