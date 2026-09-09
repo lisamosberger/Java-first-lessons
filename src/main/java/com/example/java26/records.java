@@ -2,6 +2,7 @@ package com.example.java26;
 
 public class records {
     record vInfo(String vName, int eNr){}
+    // Ett record används för att lagra flera relaterade värden i ett objekt.
     static void main (){
 
         IO.println("Voting registration");
