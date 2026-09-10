@@ -19,6 +19,9 @@ public class Uppgift_9 {
             IO.println(sentence.charAt(i));
         }
 
+        String reversed = new StringBuilder(sentence).reverse().toString();
+        IO.println(reversed);
+
         if (sentence.contains("Java")) {
             IO.println("It contains Java!");
         }
