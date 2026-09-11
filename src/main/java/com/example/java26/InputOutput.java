@@ -2,7 +2,7 @@ package com.example.java26;
 
 public class InputOutput {
     static void main(){
-
+        //output and input methods
         IO.println("Vad heter du?");
         String name = IO.readln();
         IO.println("Hej " + name);
