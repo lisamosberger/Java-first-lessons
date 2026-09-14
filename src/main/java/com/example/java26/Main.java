@@ -2,7 +2,7 @@ package com.example.java26;
 
 import java.util.Locale;
 
-public class Main {
+public class Main {  //Metod
     public static void main(String[] args) {
             Locale.setDefault(Locale.ENGLISH);
             IO.println("Hello World!");
