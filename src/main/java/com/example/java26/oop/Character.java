@@ -60,3 +60,8 @@ public class Character {
         return health > 0;
     }
 }
+/*
+Det är bättre att styra åtkomsten via metoden istället för att göra health publik eftersom klassen då
+själv kan kontrollera hur health får ändras. Om health skulle vara publik kan vilken annan kod som helst justera health
+och bryta mot reglerna som gäller för health.
+ */
