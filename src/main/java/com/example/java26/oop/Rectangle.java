@@ -1,27 +1,39 @@
 package com.example.java26.oop;
-record Color(int red, int green, int blue) {}
-public class Rectangle {
-    private int width; //Field
-    private int height; //private access, bara coden som befinner sig i klassen kan modifera värderna
-    private String color; //#FFA203 färger i code från röd, blå och grön, Reference to anothyer objek, Composition
 
-    public Rectangle(){ //varje nytt objekt börjar med denna värden på
+public class Rectangle {
+    private int width;   //Field/Fält
+    private int height;  //private access, only code in this class
+    private Color color;  //Reference to another object, Composition. Defaults to null
+
+    public Rectangle() {
         width = 1;
         height = 1;
+        color = new Color(0, 0, 0);
     }
 
-    public Rectangle(int w, int h){
-        width = w;
-        height = h;
+    public Rectangle(int width, int height) {
+        if (width < 1 || height < 1)
+            throw new IllegalArgumentException();
+        this.width = width;
+        this.height = height;
+        this.color = new Color(0, 0, 0);
     }
 
-    // för att får de automatisk, tryck höger klick, generate och välja getter och setter
-    public int getWidth(){ //declarerad int (returtyp)
+    public Rectangle(int width, int height, Color color) {
+        if (width < 1 || height < 1 || color == null)
+            throw new IllegalArgumentException();
+        this.width = width;
+        this.height = height;
+        this.color = color;
+    }
+
+    public int getWidth() {
         return width;
     }
 
-    // den är inte static eftersom den tillhör en objekt inte klassen
-    public void setWidth(int width){ //inte declarerad eftersom den skickar ingenting tillbacks
+    public void setWidth(int width) {
+        if (width < 1)
+            throw new IllegalArgumentException();
         this.width = width;
     }
 
@@ -30,14 +42,25 @@ public class Rectangle {
     }
 
     public void setHeight(int height) {
+        if( height < 1)
+            throw new IllegalArgumentException();
         this.height = height;
     }
 
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(Color color) {
+        if( color == null)
+            throw new IllegalArgumentException();
         this.color = color;
     }
+
+    public int area() {
+        return width * height;
+    }
+}
+
+record Color(int red, int green, int blue) {
 }
