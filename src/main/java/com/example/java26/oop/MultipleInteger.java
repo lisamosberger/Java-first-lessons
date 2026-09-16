@@ -15,6 +15,10 @@ public class MultipleInteger {
         return values[index];
     }
 
+    public void removeLast() {
+        counter--;
+    }
+
     public int size () {
         return counter;
     }
@@ -25,13 +29,14 @@ public class MultipleInteger {
         integers.add(10);
         integers.add(10);
         integers.add(20);
-        integers.add(0);
+        integers.add(5);
+        integers.removeLast();
         IO.println(integers.getValue(0));
         IO.println(integers.getValue(1));
         IO.println(integers.getValue(2));
         IO.println(integers.getValue(3));
         IO.println(integers.getValue(4));//blir 0 eftersom det finns en default varning 0 på fjärde ställe
-      //  IO.println(integers.getValue(10));// det kommer att vara ett error vid 10 eftersom vi har bara 0-9 i array!
+      //IO.println(integers.getValue(10));// det kommer att vara ett error vid 10 eftersom vi har bara 0-9 i array!
 
         for (int i = 0; i < integers.size(); i++) {
             IO.println(integers.getValue(i));
