@@ -1,6 +1,6 @@
 package com.example.java26.oop2.payment;
 
-public class Payment {
+public abstract class Payment {
     protected double amount;
     public Payment(double amount){
         this.amount = amount;
