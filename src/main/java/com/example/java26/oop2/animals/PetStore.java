@@ -29,5 +29,17 @@ public class PetStore {
             }
 
         }
+
+        Pet pet = new Dog();
+        pet.isCute();
+
+        Puppy puppy = new Puppy();
+        puppy.play();
+        puppy.isCute();
+        puppy.makeSound();
+
+        Dog dog = new Dog();
+        dog.isCute();
+
     }
 }
