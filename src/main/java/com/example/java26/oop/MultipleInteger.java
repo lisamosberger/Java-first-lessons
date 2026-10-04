@@ -43,7 +43,9 @@ public class MultipleInteger {
     }
 
     public void removeLast() {
-        counter--;
+        if (counter >= 0) {
+            counter--;
+        }
     }
 
     public void removeAtIndex(int index){
