@@ -1,4 +1,4 @@
-package com.example.java26;
+package com.example.java26.arrays;
 
 public class ArrayDemo {
     static void main(String[] args){

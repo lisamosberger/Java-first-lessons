@@ -1,6 +1,6 @@
 package com.programmer;
 
-import com.example.java26.Main;
+import com.example.java26.basics.Main;
 
 public class InsuranceCalculator {
     static void main() {

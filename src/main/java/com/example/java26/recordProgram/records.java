@@ -1,4 +1,4 @@
-package com.example.java26;
+package com.example.java26.recordProgram;
 
 public class records {
     record vInfo(String vName, int eNr){}

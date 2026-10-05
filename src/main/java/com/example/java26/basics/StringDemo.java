@@ -1,6 +1,4 @@
-package com.example.java26;
-
-import java.util.Locale;
+package com.example.java26.basics;
 
 public class StringDemo {
     static void main (){
