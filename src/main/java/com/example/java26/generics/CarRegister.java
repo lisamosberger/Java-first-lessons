@@ -1,9 +1,8 @@
 package com.example.java26.generics;
 
+import java.awt.*;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class CarRegister {
 
@@ -12,20 +11,38 @@ public class CarRegister {
 
     static void main() {
         var register = new CarRegister();
-        register.cars.add(new Car("ZBC123", "red"));
-        register.cars.add(new Car("DEF456", "blue"));
-        register.cars.add(new Car("GHI789", "green"));
-        register.cars.add(new Car("JKL101", "black"));
+        register.cars.add(new Car("ZBC123", Color.RED));
+        register.cars.add(new Car("DEF456", Color.BLACK));
+        register.cars.add(new Car("GHI789", Color.GREEN));
+        register.cars.add(new Car("JKL101", Color.YELLOW));
+        register.cars.add(new Car("JMN102", Color.WHITE));
+        register.cars.add(new Car("JER103", Color.BLUE));
+        register.cars.add(new Car("JKL104", Color.GRAY));
 
         register.cars.sort((car1, car2) ->
                 car1.regestrationNumber().compareTo(car2.regestrationNumber()));
 
+        Car toSearchFor = new Car("ZBC123", Color.BLACK);
+        for (int i = 0; i < register.cars.size(); i++) {
+            Car car = register.cars.get(i);
+            if (car.equals(toSearchFor)){
+                IO.println("Car exists");
+                break;
+            }
+            else {
+                IO.println("Car not exists");
+                break;
+            }
+        }
+
+
+        IO.println(register.cars.contains(new Car("ZBC123", Color.RED)));
         for (Car car : register.cars) {
             IO.println(car.regestrationNumber() +
                     " has colour " + car.Color() +
                     ".");
         }
-        Car toSearchFor = new Car("ZBC123", "red");
+        Car toSearch = new Car("ZBC123", Color.RED);
         IO.println(contains(register, toSearchFor));
 while (true) {
     String number = IO.readln("Enter License plate number: ");
@@ -47,7 +64,7 @@ while (true) {
     }
 
     private static boolean contains(CarRegister register, Car toSearchFor) {
-        for (int i = 0; i <= register.cars.size(); i++) {
+        for (int i = 0; i < register.cars.size(); i++) {
             Car car = register.cars.get(i);
             if (car.equals(toSearchFor)) {
                 return true;
@@ -59,5 +76,5 @@ while (true) {
 }
 
 
-record Car(String regestrationNumber, String Color) {
+record Car(String regestrationNumber, Color Color) {
 }
