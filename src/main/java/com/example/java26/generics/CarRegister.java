@@ -2,12 +2,14 @@ package com.example.java26.generics;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class CarRegister {
 
     private final List<Car> cars = new ArrayList<>(20);
-
+    private final Map<String, Car> carMap = new HashMap<>();
 
     static void main() {
         var register = new CarRegister();
@@ -19,8 +21,14 @@ public class CarRegister {
         register.cars.add(new Car("JER103", Color.BLUE));
         register.cars.add(new Car("JKL104", Color.GRAY));
 
+        //Build carMap for fast lookup of cars by regestration number
+        for (Car car : register.cars) {
+            register.carMap.put(car.registrationNumber(), car);
+        }
+
+
         register.cars.sort((car1, car2) ->
-                car1.regestrationNumber().compareTo(car2.regestrationNumber()));
+                car1.registrationNumber().compareTo(car2.registrationNumber()));
 
         Car toSearchFor = new Car("ZBC123", Color.BLACK);
         for (int i = 0; i < register.cars.size(); i++) {
@@ -33,12 +41,15 @@ public class CarRegister {
                 IO.println("Car not exists");
                 break;
             }
+
+
+
         }
 
 
         IO.println(register.cars.contains(new Car("ZBC123", Color.RED)));
         for (Car car : register.cars) {
-            IO.println(car.regestrationNumber() +
+            IO.println(car.registrationNumber() +
                     " has colour " + car.Color() +
                     ".");
         }
@@ -50,13 +61,16 @@ while (true) {
         IO.println("Could not find car " + number);
         continue;
     }
+    else
     IO.println("Found car with licenseplate " + number);
+    //Search for car in carMap using regestrationNumber as key. Timecomplexity 0(1)
+    IO.println(register.carMap.get(number));
 }
     }
 
     private Car findCar(String registrationNumber) {
         for (Car car : cars) {
-            if (car.regestrationNumber().equalsIgnoreCase(registrationNumber)) {
+            if (car.registrationNumber().equalsIgnoreCase(registrationNumber)) {
                 return car;
             }
         }
@@ -76,5 +90,5 @@ while (true) {
 }
 
 
-record Car(String regestrationNumber, Color Color) {
+record Car(String registrationNumber, Color Color) {
 }
