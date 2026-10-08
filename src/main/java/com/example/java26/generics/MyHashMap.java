@@ -4,6 +4,7 @@ package com.example.java26.generics;
 import org.w3c.dom.Node;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class MyHashMap<K, V> {
     private final int DEFAULT_CAPACITY = 16;
@@ -66,6 +67,8 @@ public class MyHashMap<K, V> {
 
 
     static void main() {
+        Map<Integer, Integer> map = new HashMap<>();
+
 
         String s1 = "Aa";
         String s2 = "BB";
