@@ -16,6 +16,7 @@ public class Exercise5 {
             IO.println(getCapital("Germany"));
             IO.println(getCapital("Sweden"));
             IO.println(getCapital("USA"));
+            System.exit(0);
         }
 
         public static String getCapital(String land) {
